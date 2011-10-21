@@ -26,8 +26,14 @@
 ;; ============================================================================
 ;; Custom keybindings
 ;; ============================================================================
-(setq mac-option-modifier 'meta)
-(setq mac-command-modifier 'ctrl)
+(eval-after-load 'paredit
+  '(progn
+     (define-key paredit-mode-map (kbd "M-)") 'paredit-forward-slurp-sexp)
+     (define-key paredit-mode-map (kbd "M-(") 'paredit-backward-slurp-sexp)
+     (define-key paredit-mode-map (kbd "M-}") 'paredit-forward-barf-sexp)
+     (define-key paredit-mode-map (kbd "M-{") 'paredit-backward-barf-sexp)))
+
+(require 'paredit)
 
 ;; ============================================================================
 ;; Git/GitHub
