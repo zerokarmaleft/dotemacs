@@ -92,9 +92,7 @@
   (clojure-mode-font-lock-setup)
   (rainbow-delimiters-mode)
   (paredit-mode)
-  (hl-sexp-mode)
-  (define-key clojure-mode-map "{" 'paredit-open-brace)
-  (define-key clojure-mode-map "}" 'paredit-close-brace))
+  (hl-sexp-mode))
 
 (add-hook 'clojure-mode-hook 'setup-clojure)
 (add-hook 'slime-repl-mode-hook 'setup-clojure)
