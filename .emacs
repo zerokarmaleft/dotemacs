@@ -28,10 +28,12 @@
 ;; ============================================================================
 (eval-after-load 'paredit
   '(progn
-     (define-key paredit-mode-map (kbd "M-)") 'paredit-forward-slurp-sexp)
-     (define-key paredit-mode-map (kbd "M-(") 'paredit-backward-slurp-sexp)
-     (define-key paredit-mode-map (kbd "M-}") 'paredit-forward-barf-sexp)
-     (define-key paredit-mode-map (kbd "M-{") 'paredit-backward-barf-sexp)))
+     (define-key paredit-mode-map (kbd "C-c 0") 'paredit-forward-slurp-sexp)
+     (define-key paredit-mode-map (kbd "C-c )") 'paredit-forward-barf-sexp)
+     (define-key paredit-mode-map (kbd "C-c 9") 'paredit-backward-slurp-sexp)
+     (define-key paredit-mode-map (kbd "C-c (") 'paredit-backward-barf-sexp)
+     (define-key paredit-mode-map "{" 'paredit-open-curly)
+     (define-key paredit-mode-map "}" 'paredit-close-curly)))
 
 (require 'paredit)
 
