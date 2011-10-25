@@ -94,8 +94,13 @@
   (paredit-mode)
   (hl-sexp-mode))
 
+(defun setup-slime-clojure ()
+  (setup-clojure)
+  (set-syntax-table clojure-mode-syntax-table))
+
 (add-hook 'clojure-mode-hook 'setup-clojure)
-(add-hook 'slime-repl-mode-hook 'setup-clojure)
+(add-hook 'slime-repl-mode-hook 'setup-slime-clojure)
+
 
 ;; ============================================================================
 ;; CoffeeScript
