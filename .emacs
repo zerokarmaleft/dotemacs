@@ -51,13 +51,13 @@
 ;; ============================================================================
 ;; elisp
 ;; ============================================================================
-(defun setup-elisp ()
-  (font-lock-add-keywords nil '(("(\\|)" . 'paren-face)))
-  (rainbow-delimiters-mode)
-  (paredit-mode)
-  (hl-sexp-mode))
+;;(defun setup-elisp ()
+;;  (font-lock-add-keywords nil '(("(\\|)" . 'paren-face)))
+;;  (rainbow-delimiters-mode)
+;;  (paredit-mode)
+;;  (hl-sexp-mode))
 
-(add-hook 'emacs-lisp-mode-hook 'setup-elisp)
+;; (add-hook 'emacs-lisp-mode-hook 'setup-elisp)
 
 ;; ============================================================================
 ;; PLT Racket
